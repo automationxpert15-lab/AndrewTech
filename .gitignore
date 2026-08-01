@@ -3,6 +3,8 @@
 
 # Ignore .NET backend
 AndrewTech.Api/
+StartAndrewTech.bat
+
 
 # Ignore Website folder too as we moved to /root
 Website/
