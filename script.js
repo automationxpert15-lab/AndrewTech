@@ -617,66 +617,6 @@ contactForm?.addEventListener("submit", async event => {
             );
         }
 
-        const senderEmail =
-            document.getElementById("email").value.trim();
-
-        // Try sending an automatic reply
-        const replyData = new FormData();
-
-        replyData.append(
-            "access_key",
-            "5935b952-5761-4d0a-b107-1d709fcb53f0"
-        );
-
-        replyData.append(
-            "email",
-            senderEmail
-        );
-
-        replyData.append(
-            "subject",
-            "Thank you for contacting Andrew Tech"
-        );
-
-        replyData.append(
-            "from_name",
-            "Andrew Tech"
-        );
-
-        replyData.append(
-            "message",
-            `Thank you for contacting Andrew Tech.
-
-        We have received your enquiry and will review your requirements.
-
-        We will get back to you if we need any further information.
-
-        Kind regards,
-        Andrew Tech
-        Independent Software Developer & Consultant`
-        );
-
-        const replyResponse = await fetch(
-            "https://api.web3forms.com/submit",
-            {
-                method: "POST",
-                body: replyData
-            }
-        );
-
-        const replyResult = await replyResponse.json();
-
-        console.log("Auto-reply test response:", replyResult);
-
-        if (replyResponse.ok && replyResult.success) {
-            console.log("Second submission accepted by Web3Forms.");
-        } else {
-            console.warn(
-                "Second submission failed:",
-                replyResult.message
-            );
-        }
-
         formStatus.textContent =
             "Thank you. Your enquiry has been sent successfully.";
 
