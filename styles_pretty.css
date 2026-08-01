@@ -666,7 +666,7 @@ footer {
 
 .ai-chat-form textarea {
     width: 100%;
-    min-height: 95px;
+    min-height: 40px;
     padding: 14px;
 
     resize: vertical;
@@ -801,5 +801,5 @@ footer {
 
 #aiPrompt{
 
-    padding-top:42px;
+    padding-top:10px;
 }
