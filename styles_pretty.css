@@ -93,7 +93,7 @@ body {
 }
 .hero {
     min-height:820px;
-    padding:150px 0 90px;
+    padding:90px 0 90px;
     color:white;
     background:radial-gradient(circle at 80% 20%,#293b78 0,transparent 30%),radial-gradient(circle at 10% 30%,#183b54 0,transparent 25%),#07101e
 }
