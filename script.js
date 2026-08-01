@@ -463,7 +463,7 @@ async function sendAiQuestion_bkb(prompt) {
                 "The AI request failed."
             );
         }
-        document.getElementById("visitorIp").textContent =  responseBody.visitorIp ?? "Unknown";
+        // document.getElementById("visitorIp").textContent =  responseBody.visitorIp ?? "Unknown";
         const answer = responseBody.answer;
 
         conversation.push({
