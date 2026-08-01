@@ -1,0 +1,15 @@
+{
+  "name": "independent-software-consultant-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx http-server . -p 3000",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0",
+    "http-server": "^14.1.1"
+  }
+}

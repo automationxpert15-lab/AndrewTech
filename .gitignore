@@ -1,0 +1,30 @@
+# Secrets
+.env
+
+# Ignore .NET backend
+AndrewTech.Api/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs and local processing data
+*.log
+processed_messages.txt
+daily_replies.txt
+
+# Local/reference files
+Reference.txt
+Full-BL-Directory-2024-Monthly-Q4-Upload.xlsx
+
+# Build outputs
+bin/
+obj/
+node_modules/
+dist/
+
+# IDE
+.vscode/
+.vs/

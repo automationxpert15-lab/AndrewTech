@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Independent software developer and consultant specializing in .NET, Python, AI, React and test automation.">
+  <title>Andrew Tech | Software Developer & Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles_pretty.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div>
+    
+  </div>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home">⚡ANDREW TECH</a>
+      <button id="menuButton" class="menu-button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav id="navigation">
+      <a href="#services">Services</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#about">About</a>
+      <a href="#ask-ai">Ask AI</a>
+      <a class="nav-button" href="#contact">Discuss Your Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Independent Software Developer & Consultant</p>
+          <h1>Software engineered for <span>performance, reliability and growth.</span></h1>
+          <p class="lead">
+            Senior-level development and consulting across .NET, Python, Azure,
+            artificial intelligence, REST APIs, React automation.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#contact">Discuss Your Project</a>
+            <a class="button secondary" href="#services">Explore Services</a>
+          </div>
+          <div class="stats">
+              <div>
+                  <strong>10+</strong>
+                  <small>Years of Experience</small>
+              </div>
+
+              <div>
+                  <strong>.NET • Python • ReactJS </strong>
+                  <small>Modern Application Development</small>
+              </div>
+
+              <div>
+                  <strong>Azure • AI</strong>
+                  <small>Automation & Cloud Solutions</small>
+              </div>
+          </div>
+        </div>
+
+        <div class="code-card" aria-label="Software development illustration">
+          <div class="code-header"><span></span><span></span><span></span> solution.cs</div>
+          <pre><code>public class DigitalSolution
+{
+    public async Task&lt;Result&gt; BuildAsync()
+    {
+        await Discover();
+        await Design();
+        await Develop();
+        await Test();
+
+        return Result.Success();
+    }
+}</code></pre>
+          <div class="tag tag-one">.NET</div>
+          <div class="tag tag-two">Azure</div>
+          <div class="tag tag-three">AI</div>
+        </div>
+      </div>
+    </section>
+<section id="ask-ai" class="section ask-ai-section">
+    <div class="container ask-ai-grid">
+
+        <!-- <div class="ask-ai-intro">
+            <p class="eyebrow">AI Assistant</p>
+
+            <h2>Ask AI about software development.</h2>
+
+            <p>
+                Ask questions about .NET, Python, Azure, React,
+                REST APIs, automation and artificial intelligence.
+            </p>
+
+            <div class="ai-suggestions">
+                <button type="button" class="suggestion-button">
+                    Explain REST API
+                </button>
+
+                <button type="button" class="suggestion-button">
+                    Compare Python and C#
+                </button>
+
+                <button type="button" class="suggestion-button">
+                    Suggest an automation solution
+                </button>
+            </div>
+        </div> -->
+
+      <div class="ask-ai-intro">
+          <p class="eyebrow">Andrew Tech Assistant</p>
+
+          <h2>Ask about Andrew Tech services.</h2>
+
+          <p>
+              Ask about custom software development, web applications,
+              REST APIs, AI integration, automation and application support.
+          </p>
+
+          <div class="ai-suggestions">
+              <button type="button" class="suggestion-button">
+                  What is Andrew Tech about?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  What services do you provide?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  Can you build a custom .NET application?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  Do you develop web applications and REST APIs?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  What AI integration services do you provide?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  Can you automate repetitive business tasks?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  Do you provide application support and maintenance?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  What technologies do you use?
+              </button>
+
+              <button type="button" class="suggestion-button">
+                  How can I contact Andrew Tech?
+              </button>
+          </div>
+      </div>        
+
+        <div class="ai-chat-card">
+
+            <div class="ai-chat-header">
+                <div>
+                    <span class="ai-status-dot"></span>
+                    <strong>Andrew Tech AI</strong>
+                </div>
+
+                <button
+                    id="clearChatButton"
+                    class="clear-chat-button"
+                    type="button">
+                    Clear
+                </button>
+            </div>
+            <div
+                id="chatMessages"
+                class="chat-messages"
+                aria-live="polite">
+
+            </div>
+
+            <form id="aiChatForm" class="ai-chat-form">
+
+                <label for="aiPrompt" class="sr-only">
+                    <!-- Ask AI -->
+                    💬 Ask Our Assistant
+                </label>
+
+            <div class="textarea-wrapper">
+
+                <div id="visitorInfo" class="visitor-info">
+                    🌍 Canada &nbsp;&nbsp;
+                    IP: <span id="visitorIp">Loading...</span>
+                </div>
+
+                <textarea
+                    id="aiPrompt"
+                    name="prompt"
+                    rows="3"
+                    maxlength="2000"
+                    placeholder="Type your question..."
+                    required></textarea>
+
+            </div>
+
+                <div class="ai-form-footer">
+
+                    <span id="aiCharacterCount">0 / 2000</span>
+
+                    <button
+                        id="askAiButton"
+                        class="button primary"
+                        type="submit">
+                        💬 Ask Our Assistant
+                    </button>
+
+                </div>
+
+                <p id="aiStatus" role="status" style="display: none;"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+    <section class="tech-strip">
+      <div class="container">
+        <span>.NET</span><span>Python</span><span>Azure</span><span>React</span>
+        <span>REST APIs</span><span>Playwright</span><span>SQL</span><span>AI</span>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <p class="eyebrow">Services</p>
+        <h2>Focused expertise for modern software challenges.</h2>
+        <div class="cards">
+          <article><b>01</b><h3>Custom Software Development</h3><p>Maintainable .NET and Python applications designed around real business requirements.</p></article>
+          <article><b>02</b><h3>Web Applications & APIs</h3><p>Responsive React applications and secure ASP.NET Core REST APIs.</p></article>
+          <article><b>03</b><h3>AI Integration</h3><p>Azure OpenAI, summarization, document intelligence and workflow automation.</p></article>
+<article>
+    <b>05</b>
+    <h3>Business Process Automation</h3>
+    <p>
+        Automation scripts and lightweight tools using Python, PowerShell,
+        React and REST APIs to simplify repetitive technical and business tasks.
+    </p>
+</article>          
+<article><b>06</b><h3>Application Support</h3><p>Root-cause analysis, performance improvement and reliability.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section dark">
+      <div class="container">
+        <p class="eyebrow">Selected Solutions</p>
+        <h2>Engineering that solves operational problems.</h2>
+        <div class="solutions">
+        <article>
+            <span>Automation</span>
+            <div>
+                <h3>Business Process Automation</h3>
+                <p>Automating business workflows, system integrations and repetitive tasks to improve efficiency and reduce manual effort.</p>
+            </div>
+        </article>
+
+        <!-- <article>
+            <span>Quality</span>
+            <div>
+                <h3>Automated Smoke & Regression Testing</h3>
+                <p>Playwright test suites that validate critical user journeys before deployment.</p>
+            </div>
+        </article> -->
+
+        <article>
+            <span>Cloud</span>
+            <div>
+                <h3>Custom APIs & Cloud Applications</h3>
+                <p>Building secure REST APIs, modern web applications and Azure cloud solutions with scalable architecture and clean business logic.</p>
+            </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about">
+      <div class="photo-container">
+          <img
+              src="images/Andrew.png"
+              alt="Andrew - Independent Software Developer"
+              class="profile-photo">
+      </div>
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Senior technical experience with direct personal involvement.</h2>
+          <p>I work directly with businesses and engineering teams to analyze requirements, design, develop and test modern software solutions using .NET, Python, Azure and AI technologies.</p>
+          <p>My experience includes enterprise applications, API engineering, automation testing and practical AI integration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Start a Conversation</p>
+          <h2>Have a software challenge or an idea to build?</h2>
+          <p>Share a brief description of your project and expected outcome.</p>
+        </div>
+        <form id="contactForm" novalidate>
+          <label>Name<input id="name" name="name" required></label>
+          <label>Email<input id="email" name="email" type="email" required></label>
+          <label>Service
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Custom Software development</option>
+              <option>Web application or REST API</option>
+              <option>Azure Cloud solution</option>
+              <option>AI Integration</option>
+              <option>API Automation</option>
+            </select>
+          </label>
+          <label>Project details<textarea id="message" name="message" minlength="20" required></textarea></label>
+          <p id="formStatus" role="status"></p>
+          <button class="button primary" type="submit">Send Enquiry</button>
+          <!-- <small>This demo form does not send email yet. Connect it to a .NET API, Formspree or EmailJS.</small> -->
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container"> 
+        <p>© <span id="year"></span> Andrew Tech. All rights reserved.</p>
+        <a href="/legal">Legal</a> |
+        <a href="/privacy">Privacy</a>
+    </div>
+  </footer>
+</body>
+</html>
