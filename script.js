@@ -120,7 +120,7 @@ function setAiLoading(isLoading) {
     aiPrompt.disabled = isLoading;
 
     askAiButton.textContent =
-        isLoading ? "Thinking..." : "Ask AI";
+        isLoading ? "Thinking..." : "💬 Ask Our Assistant";
 
     if (isLoading) {
         aiStatus.textContent = "Generating response";

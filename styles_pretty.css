@@ -15,14 +15,14 @@ h6 {
 }
 body {
     margin:0;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     color:#172033;
     background:#f5f7fb;
     line-height:1.6
 }
 .container {
-    width:min(1160px,calc(100% - 36px));
-    margin:auto
+    width: min(1400px, calc(100% - 48px));
+    margin: auto;
 }
 .header {
     position:fixed;
@@ -38,38 +38,29 @@ body {
     align-items:center;
     justify-content:space-between
 }
-.logo {
-    /* font-family: "Manrope", sans-serif; */
-     font-family:"Bitcount Grid Double", sans-serif;
-    font-size: 1.8rem;
-    font-weight: 200;
-    color: #fff;
-    text-decoration:none;
-    letter-spacing:1px;
-    transition:.25s ease;
-}
-.logo {
-    display: inline-flex;
+.header .container {
+    display: flex;
     align-items: center;
-    gap: 12px;
-
-    /* padding: 10px 18px; */
-
-    border: 1px solid rgba(0,255,255,.35);
-    border-radius: 12px;
-
-    background: rgba(10,18,30,.75);
-
-    box-shadow:
-        0 0 8px rgba(0,255,255,.25),
-        0 0 20px rgba(0,255,255,.12);
-
-    backdrop-filter: blur(6px);
 }
 
-.logo span{
-    color:#6EA8FE;
+.header .logo {
+    width: 400px;
+    flex-shrink: 0;
 }
+
+.header .logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: transparent;
+    border: none;
+    box-shadow: none;    
+}
+
+.header .nav {
+    margin-left: auto;
+}
+
 .nav nav {
     display:flex;
     gap:25px;
@@ -92,8 +83,8 @@ body {
     font-size:25px
 }
 .hero {
-    min-height:820px;
-    padding:90px 0 90px;
+    min-height:720px;
+    padding:90px 0 20px;
     color:white;
     background:radial-gradient(circle at 80% 20%,#293b78 0,transparent 30%),radial-gradient(circle at 10% 30%,#183b54 0,transparent 25%),#07101e
 }
@@ -106,7 +97,7 @@ body {
 .eyebrow {
     text-transform:uppercase;
     letter-spacing:2px;
-    font-size:12px;
+    font-size:18px;
     font-weight:800;
     color:#48dfc2
 }
