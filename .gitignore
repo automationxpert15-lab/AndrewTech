@@ -4,6 +4,9 @@
 # Ignore .NET backend
 AndrewTech.Api/
 
+# Ignore Website folder too as we moved to /root
+Website/
+
 # Python
 __pycache__/
 *.pyc
