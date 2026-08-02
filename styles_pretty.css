@@ -44,13 +44,13 @@ body {
 }
 
 .header .logo {
-    width: 400px;
+    /* width: 400px; */
     flex-shrink: 0;
 }
 
 .header .logo-img {
-    width: 100%;
-    height: auto;
+    height: 36px;
+    width: auto;
     display: block;
     background: transparent;
     border: none;
@@ -83,9 +83,11 @@ body {
     font-size:25px
 }
 .hero {
-    min-height:720px;
+    min-height:520px;
     padding:90px 0 20px;
     color:white;
+    overflow:hidden;
+border-radius:24px;
     background:radial-gradient(circle at 80% 20%,#293b78 0,transparent 30%),radial-gradient(circle at 10% 30%,#183b54 0,transparent 25%),#07101e
 }
 .hero-grid {
@@ -98,7 +100,7 @@ body {
     text-transform:uppercase;
     letter-spacing:2px;
     font-size:18px;
-    font-weight:800;
+    font-weight:1000;
     color:#48dfc2
 }
 .hero h1 {
@@ -203,7 +205,9 @@ body {
 }
 .tech-strip {
     background:#0b1728;
-    color:#9fb0ca
+    color:#9fb0ca;
+    overflow:hidden;
+border-radius:24px;
 }
 .tech-strip .container {
     display:flex;
@@ -214,7 +218,9 @@ body {
     font-weight:700
 }
 .section {
-    padding:25px 0
+    padding:25px 0;
+    overflow:hidden;
+    border-radius:24px;
 }
 .section h2 {
     font-size:clamp(35px,5vw,58px);
@@ -326,8 +332,162 @@ body {
 footer {
     background:#050b14;
     color:#8494ab;
-    padding:35px 0
+    padding:35px 0;
+    overflow:hidden;
+border-radius:24px;
 }
+
+/*===================
+    Slider view
+================== */
+
+.service-carousel {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 18px;
+    margin: auto;
+    background: #071426;
+}
+
+.service-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: auto;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+}
+
+.service-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(3, 12, 26, 0.94) 0%,
+        rgba(3, 12, 26, 0.72) 42%,
+        rgba(3, 12, 26, 0.12) 75%
+    );
+}
+
+.slide-content {
+    position: absolute;
+    left: 55px;
+    bottom: 65px;
+    z-index: 2;
+    width: min(520px, 70%);
+    color: #ffffff;
+}
+
+.slide-content span {
+    display: block;
+    margin-bottom: 12px;
+    color: #30e6d3;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.slide-content h2 {
+    margin: 0 0 16px;
+    font-size: clamp(32px, 4vw, 54px);
+    line-height: 1.08;
+}
+
+.slide-content p {
+    margin: 0;
+    color: #d5deeb;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    width: 42px;
+    height: 50px;
+    border: 0;
+    background: rgba(3, 12, 26, 0.65);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.carousel-arrow:hover {
+    background: rgba(3, 12, 26, 0.9);
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    z-index: 5;
+    display: flex;
+    gap: 7px;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 24px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+@media (max-width: 700px) {
+    .service-carousel {
+        height: 420px;
+        border-radius: 12px;
+    }
+
+    .slide-content {
+        left: 25px;
+        right: 25px;
+        bottom: 55px;
+        width: auto;
+    }
+
+    .slide-content h2 {
+        font-size: 34px;
+    }
+
+    .slide-content p {
+        font-size: 15px;
+    }
+}
+
+
 @media(max-width:850px) {
     .hero-grid,.about,.contact-grid {
         grid-template-columns:1fr
@@ -515,7 +675,7 @@ footer {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
     gap: 65px;
-    align-items: center;
+    align-items: start;
 }
 
 .ask-ai-intro p {
@@ -659,13 +819,13 @@ footer {
 }
 
 .ai-chat-form {
-    padding: 20px;
+    padding: 5px;
 
     border-top: 1px solid #2b3950;
 }
 
 .ai-chat-form textarea {
-    width: 100%;
+    width: 80%;
     min-height: 40px;
     padding: 14px;
 
@@ -687,6 +847,16 @@ footer {
     border-color: #48dfc2;
 
     box-shadow: 0 0 0 3px rgba(72, 223, 194, 0.12);
+}
+
+.textarea-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+#askAiButton {
+    flex-shrink: 0;
 }
 
 .ai-form-footer {

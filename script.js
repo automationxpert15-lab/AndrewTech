@@ -58,9 +58,9 @@ function updateQuestionSuggestions(searchText = "") {
 
     // When fewer than 3 characters are entered,
     // show only the first 3 questions.
-    if (normalizedSearch.length < 3) {
+    if (normalizedSearch.length < 2) {
         suggestionButtons.forEach((button, index) => {
-            button.hidden = index >= 3;
+            button.hidden = index >= 2;
         });
 
         return;
@@ -120,7 +120,7 @@ function setAiLoading(isLoading) {
     aiPrompt.disabled = isLoading;
 
     askAiButton.textContent =
-        isLoading ? "Thinking..." : "💬 Ask Our Assistant";
+        isLoading ? "Thinking..." : "💬 Ask";
 
     if (isLoading) {
         aiStatus.textContent = "Generating response";
@@ -655,3 +655,60 @@ clearChatButton?.addEventListener("click", () => {
     aiStatus.textContent = "";
     aiStatus.className = "";
 });
+
+const carousel = document.querySelector(".service-carousel");
+const slides = document.querySelectorAll(".service-slide");
+const dots = document.querySelectorAll(".dot");
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
+
+let current = 0;
+let timer;
+
+function showSlide(index) {
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+
+    current = (index + slides.length) % slides.length;
+
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+}
+
+function startSlider() {
+    timer = setInterval(() => {
+        showSlide(current + 1);
+    }, 3000);
+}
+
+function restartSlider() {
+    clearInterval(timer);
+    startSlider();
+}
+
+nextButton.addEventListener("click", () => {
+    showSlide(current + 1);
+    restartSlider();
+});
+
+prevButton.addEventListener("click", () => {
+    showSlide(current - 1);
+    restartSlider();
+});
+
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        showSlide(index);
+        restartSlider();
+    });
+});
+
+carousel.addEventListener("mouseenter", () => {
+    clearInterval(timer);
+});
+
+carousel.addEventListener("mouseleave", () => {
+    startSlider();
+});
+
+startSlider();
